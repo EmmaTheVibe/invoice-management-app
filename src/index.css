@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-col-bg dark:bg-col-dark-bg text-col-text dark:text-col-dark-text font-sans transition-colors duration-200;
+    min-height: 100dvh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-col-border dark:bg-col-dark-border rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-col-label dark:bg-col-dark-label;
+  }
+}
+
+@layer components {
+  .form-input {
+    @apply w-full px-4 py-3 rounded border border-col-border dark:border-col-dark-ele
+           bg-col-white dark:bg-col-dark-card text-col-text dark:text-col-dark-text
+           font-bold text-body-bold placeholder:text-col-label dark:placeholder:text-col-dark-label
+           outline-none transition-colors duration-150
+           focus:border-purple dark:focus:border-purple
+           hover:border-purple dark:hover:border-purple;
+  }
+
+  .form-input.error {
+    @apply border-red-500 dark:border-red-500 focus:border-red-500;
+  }
+
+  .status-badge {
+    @apply inline-flex items-center gap-2 px-4 py-2.5 rounded font-bold text-body-bold capitalize;
+  }
+}
+
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
