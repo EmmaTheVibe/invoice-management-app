@@ -25,7 +25,6 @@ export function ItemRow({
 
   return (
     <div className="flex flex-col gap-4">
-      {/* Item Name */}
       <div className="flex flex-col gap-2">
         <label
           htmlFor={`item-name-${index}`}
@@ -36,7 +35,7 @@ export function ItemRow({
         <input
           id={`item-name-${index}`}
           {...register(`items.${index}.name`, { required: "Required" })}
-          className={`form-input ${itemErrors?.name ? "error" : ""}`}
+          className={`form-input text-base ${itemErrors?.name ? "error" : ""}`}
           aria-invalid={!!itemErrors?.name}
         />
         {itemErrors?.name && (
@@ -46,11 +45,7 @@ export function ItemRow({
         )}
       </div>
 
-      {/* Qty / Price / Total / Delete */}
-      <div
-        //   className="grid grid-cols-[64px_1fr_80px_auto] items-end gap-4"
-        className="grid grid-cols-2 md:grid-cols-[64px_1fr_80px_auto] items-end gap-4"
-      >
+      <div className="grid grid-cols-2 md:grid-cols-[64px_1fr_80px_auto] items-end gap-4">
         <div className="flex flex-col gap-2">
           <label
             htmlFor={`item-qty-${index}`}
@@ -67,7 +62,7 @@ export function ItemRow({
               min: 1,
               valueAsNumber: true,
             })}
-            className={`form-input text-center ${itemErrors?.quantity ? "error" : ""}`}
+            className={`form-input text-base text-center ${itemErrors?.quantity ? "error" : ""}`}
           />
         </div>
 
@@ -88,7 +83,7 @@ export function ItemRow({
               min: 0,
               valueAsNumber: true,
             })}
-            className={`form-input ${itemErrors?.price ? "error" : ""}`}
+            className={`form-input text-base ${itemErrors?.price ? "error" : ""}`}
           />
         </div>
 

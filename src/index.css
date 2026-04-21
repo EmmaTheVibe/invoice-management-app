@@ -35,7 +35,7 @@
 
 @layer components {
   .form-input {
-    @apply w-full px-4 py-3 rounded border border-col-border dark:border-col-dark-ele
+    @apply w-full px-4 py-4 rounded border border-col-border dark:border-col-dark-ele
            bg-col-white dark:bg-col-dark-card text-col-text dark:text-col-dark-text
            font-bold text-body-bold placeholder:text-col-label dark:placeholder:text-col-dark-label
            outline-none transition-colors duration-150
