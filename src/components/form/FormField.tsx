@@ -47,7 +47,7 @@ export function FormField({
         aria-describedby={
           error ? `${id}-error` : hint ? `${id}-hint` : undefined
         }
-        className={`form-input ${error ? "error" : ""} ${className}`}
+        className={`form-input text-base ${error ? "error" : ""} ${className}`}
         {...rest}
       />
       {hint && !error && (
