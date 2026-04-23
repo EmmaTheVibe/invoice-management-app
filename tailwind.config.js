@@ -5,20 +5,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Brand purple
         purple: {
           DEFAULT: "#7C5DFA",
           hover: "#9277FF",
         },
-        // Status colours
+
         paid: { bg: "#F3FDF9", text: "#33D69F" },
         pending: { bg: "#FFF8F0", text: "#FF8F00" },
         draft: { bg: "#F4F4F5", text: "#373B53" },
-        // Dark mode status
+
         "paid-dark": { bg: "rgba(51,214,159,0.06)", text: "#33D69F" },
         "pending-dark": { bg: "rgba(255,143,0,0.06)", text: "#FF8F00" },
         "draft-dark": { bg: "rgba(223,227,250,0.06)", text: "#DFE3FA" },
-        // Neutrals — light
+
         "col-white": "#FFFFFF",
         "col-bg": "#F8F8FB",
         "col-card": "#FFFFFF",
@@ -26,7 +25,7 @@ export default {
         "col-text": "#0C0E16",
         "col-muted": "#888EB0",
         "col-label": "#7E88C3",
-        // Neutrals — dark
+
         "col-dark-bg": "#141625",
         "col-dark-card": "#1E2139",
         "col-dark-ele": "#252945",

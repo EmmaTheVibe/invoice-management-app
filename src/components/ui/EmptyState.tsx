@@ -5,7 +5,6 @@ interface Props {
 export function EmptyState({ filtered = false }: Props) {
   return (
     <div className="flex flex-col items-center justify-center text-center pt-16 pb-8 px-6">
-      {/* Illustration */}
       <svg
         width="242"
         height="200"
@@ -43,10 +42,10 @@ export function EmptyState({ filtered = false }: Props) {
           fill="#7C5DFA"
           opacity="0.15"
         />
-        {/* Face */}
+
         <circle cx="99" cy="90" r="8" fill="#7C5DFA" opacity="0.5" />
         <circle cx="131" cy="90" r="8" fill="#7C5DFA" opacity="0.5" />
-        {/* Sad mouth */}
+
         <path
           d="M 99 115 Q 115 105 131 115"
           stroke="#7C5DFA"
